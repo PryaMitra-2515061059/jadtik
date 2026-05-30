@@ -1,0 +1,2 @@
+# jadtik
+Sistem Jadwal Praktikum
