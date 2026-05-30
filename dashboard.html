@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard - JadTik</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    </head>
+<body>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+        <div class="logo">
+            <i class="fas fa-calendar-alt"></i>
+            <span>JadTik</span>
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="jadwal.html">
+                    <i class="fas fa-calendar"></i>
+                    <span>Jadwal</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="laboratorium.html">
+                    <i class="fas fa-flask"></i>
+                    <span>Laboratorium</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="pengguna.html">
+                    <i class="fas fa-users"></i>
+                    <span>Pengguna</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="monitoring.html">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Monitoring</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="bentrok.html">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>Bentrok</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="laporan.html">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Laporan</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="profil.html">
+                    <i class="fas fa-user"></i>
+                    <span>Profil</span>
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- MAIN -->
+    <div class="main-content">
+
+        <div class="topbar">
+
+            <div class="topbar-left">
+
+                <button id="toggleSidebar">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <h2>Dashboard</h2>
+
+            </div>
+
+        </div>
+
+    <div class="top-right">
+
+        <div class="profile">
+            <img src="img/admin.jpg" alt="Admin" style="width: 100px; height: 100px; border-radius: 50%;">
+                <!-- <span>Admin</span> -->
+        </div>
+    </div>
+
+    <div class="stats">
+
+        <div class="card">
+            <h3 id="totalJadwal">0</h3>
+            <p>Total Jadwal</p>
+        </div>
+
+        <div class="card">
+            <h3 id="totalLab">0</h3>
+            <p>Total Laboratorium</p>
+        </div>
+
+        <div class="card">
+            <h3 id="totalUser">0</h3>
+            <p>Total Pengguna</p>
+        </div>
+
+        <div class="card">
+            <h3 id="totalBentrok">0</h3>
+            <p>Jadwal Bentrok</p>
+        </div>
+
+    </div>
+
+    <div class="dashboard-grid">
+
+        <div class="panel">
+
+            <div class="panel-header">
+                <h3>Jadwal Hari Ini</h3>
+            </div>
+
+            <table>
+
+                <tr>
+                    <th>Jam</th>
+                    <th>Mata Praktikum</th>
+                    <th>Lab</th>
+                </tr>
+
+                <tr>
+                    <td>08.00 - 10.00</td>
+                    <td>Pemrograman Web</td>
+                    <td>Lab 1</td>
+                </tr>
+
+                <tr>
+                    <td>10.00 - 12.00</td>
+                    <td>Basis Data</td>
+                    <td>Lab 2</td>
+                </tr>
+
+                <tr>
+                    <td>13.00 - 15.00</td>
+                    <td>Jaringan Komputer</td>
+                    <td>Lab 3</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <div class="panel">
+
+            <div class="panel-header">
+                <h3>Aktivitas Terbaru</h3>
+            </div>
+
+            <div class="activity">
+
+                <div class="activity-item">
+                    Jadwal baru berhasil ditambahkan
+                </div>
+
+                <div class="activity-item">
+                    Laboratorium Multimedia diperbarui
+                </div>
+
+                <div class="activity-item">
+                    Bentrok jadwal berhasil terdeteksi
+                </div>
+
+                <div class="activity-item">
+                    Laporan bulan ini dicetak
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="panel mt">
+
+        <div class="panel-header">
+            <h3>Status Laboratorium</h3>
+        </div>
+
+        <table>
+
+            <tr>
+                <th>Laboratorium</th>
+                <th>Kapasitas</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>Lab Digital</td>
+                <td>40</td>
+                <td>
+                    <span class="status-active">
+                        Tersedia
+                    </span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Lab Komputer</td>
+                <td>35</td>
+                <td>
+                    <span class="status-used">
+                        Digunakan
+                    </span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Lab Telekomunikasi</td>
+                <td>30</td>
+                <td>
+                    <span class="status-active">
+                        Tersedia
+                    </span>
+                </td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+    <footer class="footer">
+
+        © 2026 JadTik
+        Sistem Penjadwalan Praktikum
+
+    </footer>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+<script src="js/sidebar.js"></script>
+
+</body>
+</html>

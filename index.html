@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - JadTik</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div class="login-container">
+
+    <div class="login-left">
+
+        <div class="logo">
+            <i class="fas fa-calendar-alt"></i>
+            <h1>JadTik</h1>
+        </div>
+
+        <h2>Sistem Penjadwalan Praktikum</h2>
+
+        <p>
+            Kelola jadwal praktikum laboratorium,
+            monitoring penggunaan laboratorium,
+            dan deteksi bentrok jadwal dengan mudah.
+        </p>
+
+    </div>
+
+    <div class="login-right">
+
+        <div class="login-card">
+
+            <h2>Login</h2>
+
+            <p>Masukkan akun Anda</p>
+
+            <form id="loginForm">
+
+                <div class="input-group">
+
+                    <label>Username</label>
+
+                    <div class="input-box">
+                        <i class="fas fa-user"></i>
+
+                        <input
+                        type="text"
+                        id="username"
+                        placeholder="Masukkan username"
+                        required>
+                    </div>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Password</label>
+
+                    <div class="input-box">
+                        <i class="fas fa-lock"></i>
+
+                        <input
+                        type="password"
+                        id="password"
+                        placeholder="Masukkan password"
+                        required>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="login-btn">
+                    Login
+                </button>
+
+            </form>
+
+            <div id="message">
+
+            </div>
+
+            <footer class="footer">
+
+                © 2026 JadTik
+                Sistem Penjadwalan Praktikum
+
+            </footer>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/auth.js"></script>
+
+</body>
+</html>
