@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Laporan - JadTik</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+
+<body>
+
+    <div class="sidebar">
+
+        <div class="logo">
+            <i class="fas fa-calendar-alt"></i>
+            <span>JadTik</span>
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="jadwal.html">
+                    <i class="fas fa-calendar"></i>
+                    <span>Jadwal</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="laboratorium.html">
+                    <i class="fas fa-flask"></i>
+                    <span>Laboratorium</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="pengguna.html">
+                    <i class="fas fa-users"></i>
+                    <span>Pengguna</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="monitoring.html">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Monitoring</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="bentrok.html">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>Bentrok</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="laporan.html">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Laporan</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="profil.html">
+                    <i class="fas fa-user"></i>
+                    <span>Profil</span>
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <div class="main-content">
+
+        <div class="topbar">
+
+            <div class="topbar-left">
+
+                <button id="toggleSidebar">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <h2>Laporan Jadwal Praktikum</h2>
+
+            </div>
+
+        </div>
+
+    <div class="stats">
+        <div class="card">
+            <h3 id="totalJadwal">
+                0
+            </h3>
+            <p>Total Jadwal</p>
+
+        </div>
+
+        <div class="card">
+            <h3 id="totalLab">
+                0
+            </h3>
+            <p>Total Laboratorium</p>
+
+        </div>
+        <div class="card">
+            <h3 id="totalBentrok">
+                0
+            </h3>
+
+            <p>Total Bentrok</p>
+        </div>
+    </div>
+
+   <div class="filter-box">
+
+        <div class="filter-left">
+
+            <input
+            type="text"
+            id="filterMatkul"
+            placeholder="Cari Praktikum">
+
+            <button onclick="filterLaporan()">
+                Cari
+            </button>
+
+        </div>
+
+        <button
+        class="print-btn"
+        onclick="cetakLaporan()">
+
+            <i class="fas fa-file-pdf"></i>
+            Cetak
+
+        </button>
+
+    </div>
+
+    <div id="printArea">
+
+        <div class="info-laporan">
+
+            <p>
+                Tanggal :
+                <span id="tanggalCetak"></span>
+            </p>
+
+        </div>
+    
+    </div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+
+                    <th>No</th>
+                    <th>Mata Praktikum</th>
+                    <th>Kelas</th>
+                    <th>Laboratorium</th>
+                    <th>Hari</th>
+                    <th>Jam</th>
+
+                </tr>
+            </thead>
+
+            <tbody id="laporanTable">
+
+            </tbody>
+
+        </table>
+    </div>
+
+    <footer class="footer">
+
+        © 2026 JadTik
+        Sistem Penjadwalan Praktikum
+
+    </footer>
+    
+</div>
+
+<div id="popupCetak" class="popup">
+
+    <div class="popup-content">
+
+        <div class="popup-icon">
+
+            <i class="fas fa-print"></i>
+
+        </div>
+
+        <h3>
+            Konfirmasi Cetak
+        </h3>
+
+        <p>
+            Apakah Anda ingin mencetak laporan?
+        </p>
+
+        <div class="popup-button">
+
+            <button
+            class="btn-batal"
+            onclick="tutupPopup()">
+
+                Batal
+
+            </button>
+
+            <button
+            class="btn-ya"
+            onclick="prosesCetak()">
+
+                Cetak
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/laporan.js"></script>
+<script src="js/sidebar.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</body>
+</html>

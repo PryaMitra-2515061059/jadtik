@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Deteksi Bentrok - JadTik</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+<body>
+
+    <div class="sidebar">
+
+        <div class="logo">
+            <i class="fas fa-calendar-alt"></i>
+            <span>JadTik</span>
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="jadwal.html">
+                    <i class="fas fa-calendar"></i>
+                    <span>Jadwal</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="laboratorium.html">
+                    <i class="fas fa-flask"></i>
+                    <span>Laboratorium</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="pengguna.html">
+                    <i class="fas fa-users"></i>
+                    <span>Pengguna</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="monitoring.html">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Monitoring</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="bentrok.html">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>Bentrok</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="laporan.html">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Laporan</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="profil.html">
+                    <i class="fas fa-user"></i>
+                    <span>Profil</span>
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <div class="main-content">
+
+        <div class="topbar">
+
+            <div class="topbar-left">
+
+                <button id="toggleSidebar">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <h2>Deteksi Bentrok Jadwal</h2>
+
+            </div>
+
+        </div>
+    
+    <div class="alert-box" id="statusBentrok">
+
+        Tidak ada bentrok jadwal
+
+    </div>
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>No</th>
+                    <th>Praktikum 1</th>
+                    <th>Praktikum 2</th>
+                    <th>Laboratorium</th>
+                    <th>Hari</th>
+                    <th>Status</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="bentrokTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <footer class="footer">
+
+        © 2026 JadTik
+        Sistem Penjadwalan Praktikum
+
+    </footer>
+    
+</div>
+
+<script src="js/bentrok.js"></script>
+<script src="js/sidebar.js"></script>
+
+</body>
+</html>
