@@ -10,7 +10,6 @@
 
 <body>
 
-    <!-- SIDEBAR -->
     <div class="sidebar">
 
         <div class="logo">
@@ -80,7 +79,6 @@
 
     </div>
 
-    <!-- MAIN -->
     <div class="main-content">
 
         <div class="topbar">
@@ -97,65 +95,73 @@
 
         </div>
 
-    <!-- STATISTIK -->
-
     <div class="stats">
-
         <div class="card">
-
             <h3 id="totalJadwal">
                 0
             </h3>
-
             <p>Total Jadwal</p>
 
         </div>
 
         <div class="card">
-
             <h3 id="totalLab">
                 0
             </h3>
-
             <p>Total Laboratorium</p>
 
         </div>
-
         <div class="card">
-
             <h3 id="totalBentrok">
                 0
             </h3>
 
             <p>Total Bentrok</p>
+        </div>
+    </div>
+
+   <div class="filter-box">
+
+        <div class="filter-left">
+
+            <input
+            type="text"
+            id="filterMatkul"
+            placeholder="Cari Praktikum">
+
+            <button onclick="filterLaporan()">
+                Cari
+            </button>
 
         </div>
 
-    </div>
+        <button
+        class="print-btn"
+        onclick="cetakLaporan()">
 
-    <!-- FILTER -->
+            <i class="fas fa-file-pdf"></i>
+            Cetak
 
-    <div class="filter-box">
-
-        <input
-        type="text"
-        id="filterMatkul"
-        placeholder="Cari Praktikum">
-
-        <button onclick="filterLaporan()">
-            Cari
         </button>
 
     </div>
 
-    <!-- TABEL -->
+    <div id="printArea">
+
+        <div class="info-laporan">
+
+            <p>
+                Tanggal :
+                <span id="tanggalCetak"></span>
+            </p>
+
+        </div>
+    
+    </div>
 
     <div class="table-container">
-
         <table>
-
             <thead>
-
                 <tr>
 
                     <th>No</th>
@@ -166,7 +172,6 @@
                     <th>Jam</th>
 
                 </tr>
-
             </thead>
 
             <tbody id="laporanTable">
@@ -174,7 +179,6 @@
             </tbody>
 
         </table>
-
     </div>
 
     <footer class="footer">
@@ -186,8 +190,52 @@
     
 </div>
 
+<div id="popupCetak" class="popup">
+
+    <div class="popup-content">
+
+        <div class="popup-icon">
+
+            <i class="fas fa-print"></i>
+
+        </div>
+
+        <h3>
+            Konfirmasi Cetak
+        </h3>
+
+        <p>
+            Apakah Anda ingin mencetak laporan?
+        </p>
+
+        <div class="popup-button">
+
+            <button
+            class="btn-batal"
+            onclick="tutupPopup()">
+
+                Batal
+
+            </button>
+
+            <button
+            class="btn-ya"
+            onclick="prosesCetak()">
+
+                Cetak
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
 <script src="js/laporan.js"></script>
 <script src="js/sidebar.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
 </body>
 </html>
