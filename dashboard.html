@@ -74,19 +74,25 @@
                     <span>Profil</span>
                 </a>
             </li>
+
         </ul>
+
     </div>
 
     <div class="main-content">
+
         <div class="topbar">
+
             <div class="topbar-left">
-                
+
                 <button id="toggleSidebar">
                     <i class="fas fa-bars"></i>
                 </button>
 
                 <h2>Dashboard</h2>
+
             </div>
+
         </div>
 
     <div class="top-right">
@@ -118,40 +124,35 @@
             <h3 id="totalBentrok">0</h3>
             <p>Jadwal Bentrok</p>
         </div>
+
     </div>
 
     <div class="dashboard-grid">
+
         <div class="panel">
+
             <div class="panel-header">
                 <h3>Jadwal Hari Ini</h3>
             </div>
 
             <table>
 
-                <tr>
-                    <th>Jam</th>
-                    <th>Mata Praktikum</th>
-                    <th>Lab</th>
-                </tr>
+                <thead>
 
-                <tr>
-                    <td>08.00 - 10.00</td>
-                    <td>Pemrograman Web</td>
-                    <td>Lab 1</td>
-                </tr>
+                    <tr>
+                        <th>Jam</th>
+                        <th>Mata Praktikum</th>
+                        <th>Lab</th>
+                    </tr>
 
-                <tr>
-                    <td>10.00 - 12.00</td>
-                    <td>Basis Data</td>
-                    <td>Lab 2</td>
-                </tr>
+                </thead>
 
-                <tr>
-                    <td>13.00 - 15.00</td>
-                    <td>Jaringan Komputer</td>
-                    <td>Lab 3</td>
-                </tr>
+                <tbody id="jadwalHariIni">
+
+                </tbody>
+
             </table>
+
         </div>
 
     <div class="panel mt">
@@ -161,42 +162,22 @@
         </div>
 
         <table>
-            <tr>
-                <th>Laboratorium</th>
-                <th>Kapasitas</th>
-                <th>Status</th>
-            </tr>
 
-            <tr>
-                <td>Lab Digital</td>
-                <td>40</td>
-                <td>
-                    <span class="status-active">
-                        Tersedia
-                    </span>
-                </td>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Laboratorium</th>
+                    <th>Kapasitas</th>
+                    <th>Status</th>
+                </tr>
+            
+            </thead>
 
-            <tr>
-                <td>Lab Komputer</td>
-                <td>35</td>
-                <td>
-                    <span class="status-used">
-                        Digunakan
-                    </span>
-                </td>
-            </tr>
+            <tbody id="statusLabTable">
 
-            <tr>
-                <td>Lab Telekomunikasi</td>
-                <td>30</td>
-                <td>
-                    <span class="status-active">
-                        Tersedia
-                    </span>
-                </td>
-            </tr>
+            </tbody>
+
         </table>
+
     </div>
 
     <footer class="footer">
