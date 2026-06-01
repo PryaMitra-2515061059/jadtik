@@ -9,7 +9,6 @@
     </head>
 <body>
 
-    <!-- SIDEBAR -->
     <div class="sidebar">
 
         <div class="logo">
@@ -79,7 +78,6 @@
 
     </div>
 
-    <!-- MAIN -->
     <div class="main-content">
 
         <div class="topbar">
@@ -96,7 +94,6 @@
 
         </div>
 
-        <!-- FORM -->
         <div class="form-container">
 
             <form id="userForm">
@@ -108,9 +105,15 @@
                     required>
 
                 <input
-                    type="email"
-                    id="emailUser"
-                    placeholder="Email"
+                    type="text"
+                    id="usernameUser"
+                    placeholder="Username"
+                    required>
+
+                <input
+                    type="password"
+                    id="passwordUser"
+                    placeholder="Password"
                     required>
 
                 <select id="role">
@@ -145,7 +148,6 @@
 
         </div>
 
-        <!-- TABEL -->
         <div class="table-container">
 
             <table>
@@ -153,12 +155,15 @@
                 <thead>
 
                     <tr>
+
                         <th>No</th>
                         <th>Nama</th>
-                        <th>Email</th>
+                        <th>Username</th>
+                        <th>Password</th>
                         <th>Role</th>
                         <th>Status</th>
                         <th>Aksi</th>
+
                     </tr>
 
                 </thead>
