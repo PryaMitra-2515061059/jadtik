@@ -1,219 +1,99 @@
 <!DOCTYPE html>
 <html lang="id">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Jadwal Praktikum - JadTik</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - JadTik</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
 <body>
 
-    <!-- SIDEBAR -->
-    <div class="sidebar">
+<div class="login-container">
+
+    <div class="login-left">
 
         <div class="logo">
             <i class="fas fa-calendar-alt"></i>
-            <span>JadTik</span>
+            <h1>JadTik</h1>
         </div>
 
-        <ul>
+        <h2>Sistem Penjadwalan Praktikum</h2>
 
-            <li>
-                <a href="dashboard.html">
-                    <i class="fas fa-home"></i>
-                    <span>Dashboard</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="jadwal.html">
-                    <i class="fas fa-calendar"></i>
-                    <span>Jadwal</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="laboratorium.html">
-                    <i class="fas fa-flask"></i>
-                    <span>Laboratorium</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="pengguna.html">
-                    <i class="fas fa-users"></i>
-                    <span>Pengguna</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="monitoring.html">
-                    <i class="fas fa-chart-line"></i>
-                    <span>Monitoring</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="bentrok.html">
-                    <i class="fas fa-exclamation-triangle"></i>
-                    <span>Bentrok</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="laporan.html">
-                    <i class="fas fa-file-alt"></i>
-                    <span>Laporan</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="profil.html">
-                    <i class="fas fa-user"></i>
-                    <span>Profil</span>
-                </a>
-            </li>
-
-        </ul>
+        <p>
+            Kelola jadwal praktikum laboratorium,
+            monitoring penggunaan laboratorium,
+            dan deteksi bentrok jadwal dengan mudah.
+        </p>
 
     </div>
 
-    <!-- MAIN -->
-    <div class="main-content">
+    <div class="login-right">
 
-        <div class="topbar">
+        <div class="login-card">
 
-            <div class="topbar-left">
+            <h2>Login</h2>
 
-                <button id="toggleSidebar">
-                    <i class="fas fa-bars"></i>
+            <p>Masukkan akun Anda</p>
+
+            <form id="loginForm">
+
+                <div class="input-group">
+
+                    <label>Username</label>
+
+                    <div class="input-box">
+                        <i class="fas fa-user"></i>
+
+                        <input
+                        type="text"
+                        id="username"
+                        placeholder="Masukkan username"
+                        required>
+                    </div>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Password</label>
+
+                    <div class="input-box">
+                        <i class="fas fa-lock"></i>
+
+                        <input
+                        type="password"
+                        id="password"
+                        placeholder="Masukkan password"
+                        required>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="login-btn">
+                    Login
                 </button>
 
-                <h2>Kelola Jadwal</h2>
+            </form>
+
+            <div id="message">
 
             </div>
 
+            <footer class="footer">
+
+                © 2026 JadTik
+                Sistem Penjadwalan Praktikum
+
+            </footer>
+
         </div>
 
-    <!-- FILTER -->
-
-    <div class="filter-box">
-
-        <input
-        type="text"
-        id="cariJadwal"
-        placeholder="Cari Mata Praktikum">
-
-        <select id="filterHari">
-            <option value="">Semua Hari</option>
-            <option>Senin</option>
-            <option>Selasa</option>
-            <option>Rabu</option>
-            <option>Kamis</option>
-            <option>Jumat</option>
-        </select>
-
     </div>
-
-    <!-- FORM -->
-
-    <div class="form-container" id="formContainer">
-
-        <h3>Tambah Jadwal</h3>
-
-        <form id="jadwalForm">
-
-            <input
-            type="text"
-            id="matkul"
-            placeholder="Mata Praktikum"
-            required>
-
-            <input
-            type="text"
-            id="kelas"
-            placeholder="Kelas"
-            required>
-
-            <select id="lab">
-
-                <option>Lab Digital</option>
-                <option>Lab Komputer</option>
-                <option>Lab Telekomunikasi</option>
-
-            </select>
-
-            <select id="hari">
-
-                <option>Senin</option>
-                <option>Selasa</option>
-                <option>Rabu</option>
-                <option>Kamis</option>
-                <option>Jumat</option>
-
-            </select>
-
-            <input
-            type="time"
-            id="jamMulai"
-            required>
-
-            <input
-            type="time"
-            id="jamSelesai"
-            required>
-
-            <button type="submit">
-                Simpan Jadwal
-            </button>
-
-        </form>
-
-    </div>
-
-    <!-- TABLE -->
-
-    <div class="table-container">
-
-        <table>
-
-            <thead>
-
-                <tr>
-
-                    <th>No</th>
-                    <th>Mata Praktikum</th>
-                    <th>Kelas</th>
-                    <th>Laboratorium</th>
-                    <th>Hari</th>
-                    <th>Jam</th>
-                    <th>Aksi</th>
-
-                </tr>
-
-            </thead>
-
-            <tbody id="jadwalTable">
-
-            </tbody>
-
-        </table>
-
-    </div>
-
-    <footer class="footer">
-
-        © 2026 JadTik
-        Sistem Penjadwalan Praktikum
-
-    </footer>
 
 </div>
 
-
-<script src="js/jadwal.js"></script>
-<script src="js/sidebar.js"></script>
+<script src="js/auth.js"></script>
 
 </body>
 </html>
