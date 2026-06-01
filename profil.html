@@ -10,7 +10,6 @@
 
 <body>
 
-    <!-- SIDEBAR -->
     <div class="sidebar">
 
         <div class="logo">
@@ -138,15 +137,52 @@
         <div class="profile-actions">
 
             <button
-            class="btn-delete"
-            onclick="logout()">
+            class="logout-btn"
+            onclick="bukaLogout()">
 
+                <i class="fas fa-sign-out-alt"></i>
                 Logout
 
             </button>
 
         </div>
         
+    </div>
+
+    <div class="logout-modal" id="logoutModal">
+
+        <div class="logout-content">
+
+            <i class="fas fa-sign-out-alt"></i>
+
+            <h3>Konfirmasi Logout</h3>
+
+            <p>
+                Apakah Anda yakin ingin keluar dari sistem?
+            </p>
+
+            <div class="logout-action">
+
+                <button
+                class="btn-cancel"
+                onclick="tutupLogout()">
+
+                    Batal
+
+                </button>
+
+                <button
+                class="btn-logout"
+                onclick="logout()">
+
+                    Logout
+
+                </button>
+
+            </div>
+
+        </div>
+
     </div>
 
     <footer class="footer">
